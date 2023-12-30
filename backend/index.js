@@ -33,7 +33,7 @@ server.use(cors({
 }))
 server.use(express.json()); // to parse req.body
 
-server.use(express.static(path.join(__dirname, '../frontend/build')));
+server.use(express.static(path.join(__dirname, '.././frontend/build')));
 server.use('/products', productsRouter.router);
 server.use('/categories', categoriesRouter.router)
 server.use('/brands', brandsRouter.router)
@@ -43,7 +43,7 @@ server.use('/cart', cartRouter.router)
 server.use('/orders', ordersRouter.router)
 
 server.get('*', function(req,res){
-  res.sendFile(path.join(__dirname, '../frontend/build/index.html'))
+  res.sendFile(path.join(__dirname, '.././frontend/build/index.html'))
 });
 
 main().catch(err=> console.log(err));
