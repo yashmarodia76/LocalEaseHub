@@ -3,7 +3,7 @@ const server = express();
 const mongoose = require('mongoose');
 const cors = require('cors');
 const path = require('path');
-
+server.use(express.static(path.resolve(__dirname,'build')))
 //
 require('dotenv').config();
 
@@ -33,7 +33,6 @@ server.use(cors({
 }))
 server.use(express.json()); // to parse req.body
 
-server.use(express.static(path.join(__dirname, '../frontend/build')));
 server.use('/products', productsRouter.router);
 server.use('/categories', categoriesRouter.router)
 server.use('/brands', brandsRouter.router)
