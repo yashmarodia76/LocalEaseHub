@@ -34,4 +34,3 @@ Welcome to Grocery Depot, your one-stop solution for a virtual grocery shopping 
 - **RESTful APIs**: Foster seamless communication between client and server.
 
 
-For more information or to get started, please visit our website [here](https://grocery-depot-ver1.vercel.app/).
